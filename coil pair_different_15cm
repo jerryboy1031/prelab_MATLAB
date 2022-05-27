@@ -7,7 +7,7 @@ R=0.105; %(m)
 x=-15/100:1/100:15/100;
 d=0.15; %(m)
 % the left coil
-B_left=u*N*I*R^2/2./(((x-d/2).^2+R^2).^1.5);
+B_left=-u*N*I*R^2/2./(((x-d/2).^2+R^2).^1.5);
 % the right coil
 B_right=u*N*I*R^2/2./(((x+d/2).^2+R^2).^1.5);
 % the combination B
