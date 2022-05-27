@@ -11,7 +11,7 @@ B_left=-u*N*I*R^2/2./(((x-d/2).^2+R^2).^1.5);
 % the right coil
 B_right=u*N*I*R^2/2./(((x+d/2).^2+R^2).^1.5);
 % the combination B
-B_pair_same=u*N*I*R^2/2.*(1./((x-d/2).^2+R^2).^1.5-1./((x+d/2).^2+R^2).^1.5);
+B_pair_same=u*N*I*R^2/2.*(-1./((x-d/2).^2+R^2).^1.5+1./((x+d/2).^2+R^2).^1.5);
 plot(x,B_left);
 hold on
 plot(x,B_right);
