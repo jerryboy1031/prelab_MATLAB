@@ -1,0 +1,25 @@
+% bulit on 2022.5.27
+% athor Jerry
+u=8.854*10^-12; %(F/m)
+N=200;
+I=2; %(A)
+R=0.15; %(m)
+x=-15/100:1/100:15/100;
+d=0.105; %(m)
+% the left coil
+B_left=u*N*I*R^2/2./(((x-d/2).^2+R^2).^1.5);
+% the right coil
+B_right=u*N*I*R^2/2./(((x+d/2).^2+R^2).^1.5);
+% the combination B
+B_pair_same=u*N*I*R^2/2.*(1./((x-d/2).^2+R^2).^1.5+1./((x+d/2).^2+R^2).^1.5);
+plot(x,B_left);
+hold on
+plot(x,B_right);
+hold on
+plot(x,B_pair_same);
+% figure set
+legend("right coil","left coil","a coil pair")
+xlabel("distance x (m)")
+ylabel("magnetic field B (F)")
+title("A coil pair")
+grid on
