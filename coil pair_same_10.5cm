@@ -19,7 +19,7 @@ hold on
 plot(x,B_pair_same);
 % figure set
 legend("right coil","left coil","a coil pair")
-xlabel("distance x (m)")
+xlabel("position x (m)")
 ylabel("magnetic field B (F)")
 title("A coil pair")
 grid on
